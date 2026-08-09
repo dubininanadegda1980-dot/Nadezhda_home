@@ -1,0 +1,25 @@
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+
+def test_form_submission():
+    options = Options()
+    options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+
+    driver = webdriver.Chrome(options=options)
+
+    driver.get(" https://httpbin.qa-territory.online/forms/post")
+
+    name_field =driver.find_element(By.NAME, "custname")
+    name_field.send_keys("Надежда")
+
+    submit_button = driver.find_element(By.XPATH, "//button[text()='Submit']")
+    submit_button.click()
+
+    assert "/post" in driver.current_url
+
+    driver.quit()
+
+test_form_submission()
+    
