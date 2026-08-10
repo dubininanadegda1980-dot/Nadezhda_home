@@ -1,15 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 
 def test_multiple_elements():
-    options = Options()
-    options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-    options.add_argument("--headers")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usade")
-
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome()
 
     driver.get("https://httpbin.qa-territory.online/links/10")
 

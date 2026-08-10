@@ -4,10 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 def test_form_submission():
-    options = Options()
-    options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome()
 
     driver.get(" https://httpbin.qa-territory.online/forms/post")
 
