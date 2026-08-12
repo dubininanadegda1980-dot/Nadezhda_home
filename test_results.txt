@@ -1,0 +1,18 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Надежда\OneDrive\Desktop\Nadezhda_home\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Надежда\OneDrive\Desktop\Nadezhda_home
+collecting ... collected 15 items / 1 error
+
+=================================== ERRORS ====================================
+______________________ ERROR collecting test_results.txt ______________________
+..\..\..\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:788: in read_text
+    return f.read()
+           ^^^^^^^^
+<frozen codecs>:325: in decode
+    ???
+E   UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcd in position 153: invalid continuation byte
+=========================== short test summary info ===========================
+ERROR test_results.txt - UnicodeDecodeError: 'utf-8' codec can't decode byte ...
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 14.29s ==============================
